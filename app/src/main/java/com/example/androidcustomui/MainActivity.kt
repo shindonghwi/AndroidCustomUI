@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -31,38 +32,51 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier
                         .fillMaxSize()
                         .background(
-                            Color.Black
+                            Color.White
                         ),
                     contentAlignment = Alignment.Center
                 ) {
-                    Column(modifier = Modifier.fillMaxSize()) {
+                    Column(
+                        modifier = Modifier.fillMaxSize(),
+                        verticalArrangement = Arrangement.SpaceAround,
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
                         CircleProgressBar(
-                            size = 80.dp,
+                            size = 120.dp,
                             progressBarData = ProgressBarData(
                                 hasEdgeRound = true,
-                                initProgress = 80f,
-                                strokeWidth = 4.dp
+                                initProgress = 30f,
+                                strokeWidth = 20.dp
                             )
                         ) {
-                            LoadIUImage()
+                            LoadIUImage(
+                                imageUrl = "https://t1.daumcdn.net/cfile/tistory/267AF84F56380F0B14"
+                            )
                         }
                         CircleProgressBar(
-                            size = 100.dp,
+                            size = 180.dp,
                             progressBarData = ProgressBarData(
-                                hasEdgeRound = true,
-                                initProgress = 55f
+                                hasEdgeRound = false,
+                                enableColor = Color.Blue,
+                                initProgress = 50f,
+                                strokeWidth = 20.dp
                             )
                         ) {
-                            LoadIUImage()
+                            LoadIUImage(
+                                imageUrl = "https://t1.daumcdn.net/cfile/blog/13648E444FB99AAC0F"
+                            )
                         }
                         CircleProgressBar(
-                            size = 200.dp,
+                            size = 240.dp,
                             progressBarData = ProgressBarData(
                                 hasEdgeRound = true,
-                                initProgress = 20f
+                                enableColor = Color.Magenta,
+                                initProgress = 90f
                             )
                         ) {
-                            LoadIUImage()
+                            LoadIUImage(
+                                imageUrl = "https://cdn.ppomppu.co.kr/zboard/data3/2020/0803/20200803184230_sbzqnfne.jpg"
+                            )
                         }
                     }
 
@@ -74,10 +88,10 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun LoadIUImage() {
+fun LoadIUImage(imageUrl: String) {
     AsyncImage(
         model = ImageRequest.Builder(LocalContext.current)
-            .data("https://blog.kakaocdn.net/dn/bfsErb/btrgA5ljO5d/8PQ5EAMbrrgcnWsOqgf3y1/img.jpg")
+            .data(imageUrl)
             .crossfade(true)
             .size(800)
             .build(),

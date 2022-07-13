@@ -25,8 +25,8 @@ import androidx.compose.ui.unit.dp
 fun CircleProgressBar(
     size: Dp,
     animationDuration: Int = 2000,
-    borderData: BorderData = BorderData(),
-    progressBarData: ProgressBarData = ProgressBarData(),
+    borderData: CircleBorderData = CircleBorderData(),
+    progressBarData: CircleProgressBarData = CircleProgressBarData(),
     centerComposable: @Composable (() -> Unit)? = null,
 ) {
     val initProgress = progressBarData.initProgress
@@ -127,7 +127,7 @@ fun CircleProgressBar(
     }
 }
 
-data class ProgressBarData(
+data class CircleProgressBarData(
     val initProgress: Float = 50f,
     val strokeWidth: Dp = 8.dp,
     val disableColor: Color = Color(0xFFD2DAE2),
@@ -135,7 +135,7 @@ data class ProgressBarData(
     val hasEdgeRound: Boolean = false
 )
 
-data class BorderData(
+data class CircleBorderData(
     val strokeWidth: Dp = 0.dp,
     val borderColor: Color = Color(0xFF000000)
 )

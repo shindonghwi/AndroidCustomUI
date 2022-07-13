@@ -9,7 +9,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -20,7 +20,7 @@ import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.example.androidcustomui.components.progress.CircleProgressBar
-import com.example.androidcustomui.components.progress.ProgressBarData
+import com.example.androidcustomui.components.progress.CircleProgressBarData
 import com.example.androidcustomui.ui.theme.AndroidCustomUITheme
 
 class MainActivity : ComponentActivity() {
@@ -43,7 +43,7 @@ class MainActivity : ComponentActivity() {
                     ) {
                         CircleProgressBar(
                             size = 120.dp,
-                            progressBarData = ProgressBarData(
+                            progressBarData = CircleProgressBarData(
                                 hasEdgeRound = true,
                                 initProgress = 30f,
                                 strokeWidth = 20.dp
@@ -55,7 +55,7 @@ class MainActivity : ComponentActivity() {
                         }
                         CircleProgressBar(
                             size = 180.dp,
-                            progressBarData = ProgressBarData(
+                            progressBarData = CircleProgressBarData(
                                 hasEdgeRound = false,
                                 enableColor = Color.Blue,
                                 initProgress = 50f,
@@ -68,7 +68,7 @@ class MainActivity : ComponentActivity() {
                         }
                         CircleProgressBar(
                             size = 240.dp,
-                            progressBarData = ProgressBarData(
+                            progressBarData = CircleProgressBarData(
                                 hasEdgeRound = true,
                                 enableColor = Color.Magenta,
                                 initProgress = 90f

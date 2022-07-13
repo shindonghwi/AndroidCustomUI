@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -28,60 +29,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             AndroidCustomUITheme {
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .background(
-                            Color.White
-                        ),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Column(
-                        modifier = Modifier.fillMaxSize(),
-                        verticalArrangement = Arrangement.SpaceAround,
-                        horizontalAlignment = Alignment.CenterHorizontally
-                    ) {
-                        CircleProgressBar(
-                            size = 120.dp,
-                            progressBarData = CircleProgressBarData(
-                                hasEdgeRound = true,
-                                initProgress = 30f,
-                                strokeWidth = 20.dp
-                            )
-                        ) {
-                            LoadIUImage(
-                                imageUrl = "https://t1.daumcdn.net/cfile/tistory/267AF84F56380F0B14"
-                            )
-                        }
-                        CircleProgressBar(
-                            size = 180.dp,
-                            progressBarData = CircleProgressBarData(
-                                hasEdgeRound = false,
-                                enableColor = Color.Blue,
-                                initProgress = 50f,
-                                strokeWidth = 20.dp
-                            )
-                        ) {
-                            LoadIUImage(
-                                imageUrl = "https://t1.daumcdn.net/cfile/blog/13648E444FB99AAC0F"
-                            )
-                        }
-                        CircleProgressBar(
-                            size = 240.dp,
-                            progressBarData = CircleProgressBarData(
-                                hasEdgeRound = true,
-                                enableColor = Color.Magenta,
-                                initProgress = 90f
-                            )
-                        ) {
-                            LoadIUImage(
-                                imageUrl = "https://cdn.ppomppu.co.kr/zboard/data3/2020/0803/20200803184230_sbzqnfne.jpg"
-                            )
-                        }
-                    }
-
-                }
-
+                WolfApp()
             }
         }
     }

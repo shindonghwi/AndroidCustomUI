@@ -5,6 +5,10 @@
       <map>
         <entry key="../../../../layout/compose-model-1657603102279.xml" value="0.2985641891891892" />
         <entry key="../../../../layout/compose-model-1657603236764.xml" value="1.0" />
+        <entry key="..\:/Users/ShinDongHwi/AndroidStudioProjects/AndroidCustomUI/app/src/main/res/drawable/ic_dockbar_off_home.xml" value="0.2815" />
+        <entry key="..\:/Users/ShinDongHwi/AndroidStudioProjects/AndroidCustomUI/app/src/main/res/drawable/ic_dockbar_off_news.xml" value="0.2815" />
+        <entry key="..\:/Users/ShinDongHwi/AndroidStudioProjects/AndroidCustomUI/app/src/main/res/drawable/ic_dockbar_on_home.xml" value="0.2815" />
+        <entry key="..\:/Users/ShinDongHwi/AndroidStudioProjects/AndroidCustomUI/app/src/main/res/drawable/ic_dockbar_on_news.xml" value="0.2815" />
       </map>
     </option>
   </component>
